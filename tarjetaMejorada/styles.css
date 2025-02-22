@@ -1,0 +1,89 @@
+/*Se crea la tarjeta con la gradiente de colores más suaves, las medidas y se le agregó un borde para que se vea mejor*/
+.tarjeta {
+  width: 300px;
+  height: 600px;
+  background-color: white;
+  background-image: linear-gradient(#22c1c3,#f0a0ea);
+  border: 3px solid #07094f;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/*Foto de perfil centrada de forma horizontal*/
+.foto-perfil {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+/*Mi nombre*/
+.nombre {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+/*Ocupación*/
+.titulo {
+  font-size: 18px;
+  color: white;
+  text-shadow: 3px 3px 6px #26ecce; /*Se agrega la sombra al texto de un color parecido al del tono superior de la gradiente*/
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*Párrafo con información*/
+.descripcion {
+  font-size: 14px;
+  color: #444;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/*Listado de redes*/
+.redes-sociales {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.redes-sociales a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.redes-sociales a.linkedin {
+  color: #0077b5;
+}
+
+.redes-sociales a.twitter {
+  color: #1DA1F2;
+}
+
+.redes-sociales a.github {
+  color: #333;
+}
+
+
+.redes-sociales a:hover {
+  opacity: 0.7;
+}
+
+/*Se crea el botón, inicialmente de color negro y con un pointer que cambia*/
+.boton{
+  padding: 10px 20px;
+  background-color: #332f2f ;
+  color:white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease; /*Se agrega un difuminado para la transición de colores en el hover de 0,3 segundos*/
+}
+
+/*Se crean los cambios del botón cuando el cursor pase por encima*/
+.boton:hover{
+  background-color: #49d7d2; 
+  color: black;
+}
