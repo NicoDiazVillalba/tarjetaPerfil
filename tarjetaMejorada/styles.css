@@ -1,13 +1,27 @@
+/*Se agrega un fondo y se centra la tarejta en la mitad de la página*/
+/*Se agrega un fondo con gradiente*/
+body{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  margin: 0; 
+  background: linear-gradient(135deg, #24128a, #e4e3ad)
+  
+}
+
 /*Se crea la tarjeta con la gradiente de colores más suaves, las medidas y se le agregó un borde para que se vea mejor*/
+/*Se agrega una sombra para que resalte sobre toda la página*/
 .tarjeta {
-  width: 300px;
-  height: 600px;
+  width: 350px;
+  height: auto;
   background-color: white;
   background-image: linear-gradient(#22c1c3,#f0a0ea);
-  border: 3px solid #07094f;
+  border-radius: 3%;
   margin: 20px auto;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 3px 5px rgb(163, 141, 216);
 }
 
 /*Foto de perfil centrada de forma horizontal*/
@@ -21,69 +35,78 @@
 
 /*Mi nombre*/
 .nombre {
-  font-size: 24px;
+  font-size: 30px;
   color: #333;
   text-align: center;
 }
 
 /*Ocupación*/
 .titulo {
+  font-size: 22px;
+  color: white;
+  text-shadow: 3px 3px 6px black; /*Se agrega la sombra al texto de un color parecido al del tono superior de la gradiente*/
   font-size: 18px;
   color: white;
   text-shadow: 3px 3px 6px #26ecce; /*Se agrega la sombra al texto de un color parecido al del tono superior de la gradiente*/
-  text-align: center;
-  margin-bottom: 10px;
 }
-
 /*Párrafo con información*/
 .descripcion {
-  font-size: 14px;
+  font-size: 17px;
   color: #444;
-  text-align: justify;
+  text-align: center;
   margin-bottom: 15px;
 }
-
-/*Listado de redes*/
-.redes-sociales {
-  list-style: none;
+/*Listado de redes - Se centran los botones */
+.redes-sociales{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  list-style: none; 
   padding: 0;
-  text-align: center;
+  margin: 0; 
+  width: 100%; 
 }
 
-.redes-sociales a {
-  text-decoration: none;
-  margin: 0 10px;
+/*Estilos de los botones de las redes*/
+.redes-sociales button {
+  color: rgb(241, 237, 237);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
 
-.redes-sociales a.linkedin {
+.redes-sociales button.linkedin {
+  background-color: #0077b5; 
+}
+
+.redes-sociales button.twitter {
+  background-color: #1da1f2; 
+}
+
+.redes-sociales button.github {
+  background-color: #333; 
+}
+
+/*Efecto del hoover de los botones*/
+.redes-sociales button:hover {
+  transform: scale(1.1); 
+  opacity: 0.8; 
+}
+
+.redes-sociales.linkedin {
   color: #0077b5;
 }
 
-.redes-sociales a.twitter {
+.redes-sociales.twitter {
   color: #1DA1F2;
 }
 
-.redes-sociales a.github {
+.redes-sociales.github {
   color: #333;
 }
 
 
-.redes-sociales a:hover {
-  opacity: 0.7;
-}
-
-/*Se crea el botón, inicialmente de color negro y con un pointer que cambia*/
-.boton{
-  padding: 10px 20px;
-  background-color: #332f2f ;
-  color:white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.4s ease; /*Se agrega un difuminado para la transición de colores en el hover de 0,3 segundos*/
-}
-
-/*Se crean los cambios del botón cuando el cursor pase por encima*/
-.boton:hover{
-  background-color: #49d7d2; 
-  color: black;
-}
