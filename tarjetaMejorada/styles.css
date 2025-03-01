@@ -1,112 +1,130 @@
 /*Se agrega un fondo y se centra la tarejta en la mitad de la página*/
-/*Se agrega un fondo con gradiente*/
-body{
+/* Se agrega un fondo con gradiente mas suave  */
+body {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh; 
-  margin: 0; 
-  background: linear-gradient(135deg, #24128a, #e4e3ad)
-  
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #4a4e6a, #d3d6e0); 
 }
 
-/*Se crea la tarjeta con la gradiente de colores más suaves, las medidas y se le agregó un borde para que se vea mejor*/
-/*Se agrega una sombra para que resalte sobre toda la página*/
+/* Estilos de la tarjeta */
 .tarjeta {
   width: 350px;
   height: auto;
   background-color: white;
-  background-image: linear-gradient(#22c1c3,#f0a0ea);
-  border-radius: 3%;
+  background-image: linear-gradient(135deg, #c1e1e9, #d9a6c4); /* Gradiente suave de tonos pastel */
+  border-radius: 10px; 
   margin: 20px auto;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  box-shadow: 0 3px 5px rgb(163, 141, 216);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+  animation: fadeIn 2s;
 }
 
-/*Foto de perfil centrada de forma horizontal*/
+/* Animación para la tarjeta */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Foto de perfil */
 .foto-perfil {
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
+  border: 4px solid #ffffff; 
   display: block;
   margin: auto;
 }
 
-/*Mi nombre*/
+/* Mi nombre */
 .nombre {
-  font-size: 30px;
-  color: #333;
+  font-size: 32px; 
+  color: #333333; 
+  font-weight: bold; 
   text-align: center;
+  margin-top: 15px;
 }
 
-/*Ocupación*/
+/* Ocupación */
 .titulo {
-  font-size: 22px;
-  color: white;
-  text-shadow: 3px 3px 6px black; /*Se agrega la sombra al texto de un color parecido al del tono superior de la gradiente*/
-  font-size: 18px;
-  color: white;
-  text-shadow: 3px 3px 6px #26ecce; /*Se agrega la sombra al texto de un color parecido al del tono superior de la gradiente*/
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); 
+  font-weight: 500;
+  margin-top: 10px;
 }
-/*Párrafo con información*/
+
+/* Descripción */
 .descripcion {
-  font-size: 17px;
-  color: #444;
+  font-size: 16px;
+  color: #555555; 
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  padding: 0 15px;
 }
-/*Listado de redes - Se centran los botones */
-.redes-sociales{
+
+/* Listado de redes sociales */
+.redes-sociales {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
-  list-style: none; 
+  list-style: none;
   padding: 0;
-  margin: 0; 
-  width: 100%; 
+  margin: 0;
+  width: 100%;
 }
 
-/*Estilos de los botones de las redes*/
+/* Estilo de los botones de redes sociales */
 .redes-sociales button {
-  color: rgb(241, 237, 237);
-  border: none;
-  padding: 10px 20px;
+  color: #ffffff;
+  border: 2px solid transparent; 
+  padding: 10px 25px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 25px; 
   font-size: 16px;
-  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.2); 
 }
 
 .redes-sociales button.linkedin {
-  background-color: #0077b5; 
+  background-color: #0077b5;
 }
 
 .redes-sociales button.twitter {
-  background-color: #1da1f2; 
+  background-color: #1da1f2;
 }
 
 .redes-sociales button.github {
-  background-color: #333; 
+  background-color: #333;
 }
 
-/*Efecto del hoover de los botones*/
+/* Efecto hover de los botones */
 .redes-sociales button:hover {
-  transform: scale(1.1); 
-  opacity: 0.8; 
+  transform: scale(1.1);
+  opacity: 0.9;
+
 }
 
-.redes-sociales.linkedin {
-  color: #0077b5;
+/* Estilos específicos para cada red en hover */
+.redes-sociales .linkedin:hover {
+  background-color: #0077b5;
+  color: white;
+  border-color: #0077b5;
 }
 
-.redes-sociales.twitter {
-  color: #1DA1F2;
+.redes-sociales .twitter:hover {
+  background-color: #1da1f2;
+  color: white;
+  border-color: #1da1f2;
 }
 
-.redes-sociales.github {
-  color: #333;
+.redes-sociales .github:hover {
+  background-color: #333;
+  color: white;
+  border-color: #333;
 }
-
-
